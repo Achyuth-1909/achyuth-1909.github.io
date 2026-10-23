@@ -10,25 +10,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <style>
-:root{
-  --bg:#070b14;--panel:#0e1524;--panel2:#121b2d;--line:#22304a;
-  --text:#e8eef8;--muted:#9aa8bf;--accent:#38bdf8;--accent2:#818cf8;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
+:root{--bg:#070b14;--panel:#0e1524;--panel2:#121b2d;--line:#22304a;--text:#e8eef8;--muted:#9aa8bf;--accent:#38bdf8;--accent2:#818cf8}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;line-height:1.65;overflow-x:hidden}
-body.intro-lock{overflow:hidden;height:100vh}
-h1,h2,h3,.brand{font-family:Poppins,Inter,sans-serif}
-
+body.intro-lock{overflow:hidden;height:100vh}h1,h2,h3,.brand{font-family:Poppins,Inter,sans-serif}
 .cursor-dot,.cursor-ring{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;border-radius:50%;transform:translate(-50%,-50%)}
 .cursor-dot{width:8px;height:8px;background:var(--accent)}
 .cursor-ring{width:34px;height:34px;border:1.5px solid rgba(56,189,248,.65);transition:width .18s,height .18s,border-color .18s,background .18s}
 .cursor-ring.hovering{width:54px;height:54px;border-color:var(--accent2);background:rgba(56,189,248,.10)}
 @media(max-width:768px){.cursor-dot,.cursor-ring{display:none}}
-
 #intro{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;background:radial-gradient(circle at 50% 40%,#101a2e 0%,#070b14 65%);transition:opacity .7s ease,visibility .7s}
-#intro.hidden{opacity:0;visibility:hidden}
-.intro-inner{text-align:center;padding:24px}
+#intro.hidden{opacity:0;visibility:hidden}.intro-inner{text-align:center;padding:24px}
 .logo-mark{width:118px;height:118px;margin:0 auto 22px;border-radius:30px;display:grid;place-items:center;font-family:Poppins;font-weight:800;font-size:2.1rem;color:#04121f;background:linear-gradient(135deg,var(--accent),var(--accent2));box-shadow:0 0 0 1px rgba(255,255,255,.08),0 25px 60px rgba(56,189,248,.22);animation:float 3.2s ease-in-out infinite}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
 .intro-name{font-size:clamp(2rem,7vw,4rem);font-weight:800;letter-spacing:-.03em;margin:0}
@@ -37,305 +29,85 @@ h1,h2,h3,.brand{font-family:Poppins,Inter,sans-serif}
 .enter-btn{display:inline-flex;align-items:center;gap:10px;border:0;cursor:pointer;padding:15px 28px;border-radius:999px;font-weight:700;font-size:1rem;color:#04121f;background:linear-gradient(135deg,var(--accent),var(--accent2));transition:transform .2s,box-shadow .2s}
 .enter-btn:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(56,189,248,.25)}
 .enter-hint{margin-top:18px;color:var(--muted);font-size:.85rem}
-
 header{position:sticky;top:0;z-index:50;background:rgba(7,11,20,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
 .nav{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:15px 24px}
 .brand{display:flex;align-items:center;gap:12px;font-weight:800;text-decoration:none;color:var(--text)}
 .brand-badge{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;font-weight:800;color:#04121f;background:linear-gradient(135deg,var(--accent),var(--accent2))}
-.nav-links{display:flex;gap:20px;align-items:center}
-.nav-links a{color:var(--muted);text-decoration:none;font-size:.94rem;transition:color .2s}
-.nav-links a:hover{color:var(--accent)}
+.nav-links{display:flex;gap:20px;align-items:center}.nav-links a{color:var(--muted);text-decoration:none;font-size:.94rem;transition:color .2s}.nav-links a:hover{color:var(--accent)}
 .icon-link{display:inline-grid;place-items:center;width:38px;height:38px;border-radius:11px;border:1px solid var(--line);color:var(--muted);transition:.2s}
 .icon-link:hover{color:#fff;border-color:var(--accent);transform:translateY(-2px)}
-.icon-link.mail:hover{color:#ea4335}
-.icon-link.phone:hover{color:#22c55e}
-.icon-link.linkedin:hover{color:#0a66c2}
+.icon-link.mail:hover{color:#ea4335}.icon-link.phone:hover{color:#22c55e}.icon-link.linkedin:hover{color:#0a66c2}
 @media(max-width:720px){.nav-links a:not(.icon-link){display:none}}
-
-main{max-width:1100px;margin:auto;padding:0 24px}
-section{padding:76px 0;border-bottom:1px solid var(--line)}
-.reveal{opacity:0;transform:translateY(34px);transition:opacity .7s ease,transform .7s ease}
-.reveal.visible{opacity:1;transform:none}
+main{max-width:1100px;margin:auto;padding:0 24px}section{padding:76px 0;border-bottom:1px solid var(--line)}
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:none}
 .eyebrow{display:inline-block;padding:7px 13px;border-radius:999px;background:rgba(56,189,248,.12);color:var(--accent);font-size:.76rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase}
 h1{font-size:clamp(2.3rem,6vw,4rem);line-height:1.08;margin:18px 0 14px;letter-spacing:-.03em}
-h2{font-size:clamp(1.7rem,3.4vw,2.3rem);margin:0 0 12px}
-.sub{color:var(--muted);max-width:720px}
-.hero{padding:90px 0 70px}
-.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
-.btn{padding:13px 22px;border-radius:12px;text-decoration:none;font-weight:700}
-.btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#04121f}
-.btn-outline{border:1.5px solid var(--line);color:var(--text)}
+h2{font-size:clamp(1.7rem,3.4vw,2.3rem);margin:0 0 12px}.sub{color:var(--muted);max-width:720px}
+.hero{padding:90px 0 70px}.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{padding:13px 22px;border-radius:12px;text-decoration:none;font-weight:700}.btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#04121f}.btn-outline{border:1.5px solid var(--line);color:var(--text)}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:34px}
 .card{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:18px;padding:24px;transition:transform .25s,border-color .25s}
-.card:hover{transform:translateY(-6px);border-color:rgba(56,189,248,.55)}
-.card i{font-size:1.35rem;color:var(--accent);margin-bottom:12px}
-.card h3{margin:0 0 8px}
-.card p{margin:0;color:var(--muted);font-size:.96rem}
-.skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
-.skill{padding:10px 15px;border-radius:999px;border:1px solid var(--line);background:var(--panel);font-size:.9rem;font-weight:600}
+.card:hover{transform:translateY(-6px);border-color:rgba(56,189,248,.55)}.card i{font-size:1.35rem;color:var(--accent);margin-bottom:12px}.card h3{margin:0 0 8px}.card p{margin:0;color:var(--muted);font-size:.96rem}
+.skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}.skill{padding:10px 15px;border-radius:999px;border:1px solid var(--line);background:var(--panel);font-size:.9rem;font-weight:600}
 .case{display:grid;grid-template-columns:1.4fr .9fr;gap:24px;align-items:center;background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:20px;padding:26px;margin-top:20px}
-.case h3{margin:0 0 10px}
-.case p{color:var(--muted);margin:0 0 14px}
-.case ul{margin:0;padding-left:20px;color:var(--muted)}
-.metric{font-size:1.7rem;font-weight:800;color:var(--accent)}
-.metric-label{color:var(--muted);font-size:.86rem}
+.case h3{margin:0 0 10px}.case p{color:var(--muted);margin:0 0 14px}.case ul{margin:0;padding-left:20px;color:var(--muted)}
+.metric{font-size:1.7rem;font-weight:800;color:var(--accent)}.metric-label{color:var(--muted);font-size:.86rem}
 .timeline{border-left:2px solid var(--line);margin:30px 0 0 8px;padding-left:24px}
-.role{position:relative;margin-bottom:26px}
-.role:before{content:"";position:absolute;left:-32px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 5px rgba(56,189,248,.15)}
-.role h3{margin:0}
+.role{position:relative;margin-bottom:26px}.role:last-child{margin-bottom:0}
+.role:before{content:"";position:absolute;left:-32px;top:20px;width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 5px rgba(56,189,248,.15)}
 .meta{color:var(--muted);font-size:.92rem;margin:5px 0 10px}
-
-.contact{border-bottom:0}
-.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:34px}
+.experience-heading{display:flex;align-items:center;gap:16px;margin-bottom:8px}
+.company-logo-link{width:76px;height:76px;flex:0 0 76px;display:grid;place-items:center;overflow:hidden;border:1px solid var(--line);border-radius:17px;background:#fff;text-decoration:none;transition:transform .22s,border-color .22s,box-shadow .22s}
+.company-logo-link:hover{transform:translateY(-3px);border-color:var(--accent);box-shadow:0 10px 28px rgba(56,189,248,.12)}
+.company-logo{width:100%;height:100%;object-fit:contain;padding:7px;display:block}
+.logo-fallback{display:none;width:100%;height:100%;place-items:center;color:#e8eef8;background:linear-gradient(135deg,#0e7490,#4f46e5);font-family:Poppins,sans-serif;font-weight:800;font-size:1rem;letter-spacing:.02em}
+.company-name{color:var(--text);text-decoration:none;transition:color .2s}.company-name:hover{color:var(--accent)}
+.company-website{display:inline-flex;align-items:center;gap:7px;color:var(--accent);text-decoration:none;font-size:.88rem;font-weight:600}.company-website:hover{text-decoration:underline}
+.role ul{margin:10px 0 0;padding-left:20px;color:var(--muted)}.role li{margin:5px 0}
+.contact{border-bottom:0}.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:34px}
 .contact-card{display:flex;align-items:center;gap:14px;padding:20px;border-radius:16px;background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line);color:var(--text);text-decoration:none;transition:transform .25s,border-color .25s}
 .contact-card:hover{transform:translateY(-5px);border-color:rgba(56,189,248,.55)}
 .contact-icon{width:46px;height:46px;flex:0 0 46px;border-radius:13px;display:grid;place-items:center;font-size:1.15rem}
-.ci-name{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#04121f}
-.ci-mail{background:rgba(234,67,53,.14);color:#ea4335}
-.ci-phone{background:rgba(34,197,94,.14);color:#22c55e}
-.ci-linkedin{background:rgba(10,102,194,.18);color:#0a66c2}
-.ci-location{background:rgba(129,140,248,.16);color:#818cf8}
-.ci-available{background:rgba(34,197,94,.14);color:#22c55e}
-.contact-card span{display:block;color:var(--muted);font-size:.78rem}
-.contact-card strong{font-size:.98rem}
+.ci-name{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#04121f}.ci-mail{background:rgba(234,67,53,.14);color:#ea4335}.ci-phone{background:rgba(34,197,94,.14);color:#22c55e}.ci-linkedin{background:rgba(10,102,194,.18);color:#0a66c2}.ci-location{background:rgba(129,140,248,.16);color:#818cf8}.ci-available{background:rgba(34,197,94,.14);color:#22c55e}
+.contact-card span{display:block;color:var(--muted);font-size:.78rem}.contact-card strong{font-size:.98rem}
 footer{padding:26px 0;color:var(--muted);text-align:center;font-size:.88rem}
-@media(max-width:760px){.case{grid-template-columns:1fr}}
+@media(max-width:760px){.case{grid-template-columns:1fr}.experience-heading{align-items:flex-start}.company-logo-link{width:64px;height:64px;flex-basis:64px}.role:before{top:16px}}
 </style>
 </head>
 <body class="intro-lock">
-
-<div class="cursor-dot" id="cursorDot"></div>
-<div class="cursor-ring" id="cursorRing"></div>
-
-<div id="intro">
-  <div class="intro-inner">
-    <div class="logo-mark">AK</div>
-    <h1 class="intro-name">Achyuth Kumar <span>Bellamkonda</span></h1>
-    <p class="intro-role">Senior Research Analyst · Company &amp; Industry Research · Talent Sourcing Support</p>
-    <button class="enter-btn" id="enterBtn"><i class="fa-solid fa-arrow-right"></i> Explore Portfolio</button>
-    <p class="enter-hint">Click to open the portfolio</p>
-  </div>
-</div>
-
-<header>
-  <div class="nav">
-    <a class="brand" href="#home">
-      <span class="brand-badge">AK</span>
-      <span>Achyuth Kumar</span>
-    </a>
-    <nav class="nav-links">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#work">Work</a>
-      <a href="#experience">Experience</a>
-      <a href="#education">Education</a>
-      <a class="icon-link mail" href="mailto:achyuthbellamkonda19@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-      <a class="icon-link phone" href="tel:+91817961****" aria-label="Phone"><i class="fa-solid fa-mobile-screen"></i></a>
-      <a class="icon-link linkedin" href="https://www.linkedin.com/in/nova-hayes-95225825a/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-    </nav>
-  </div>
-</header>
-
+<div class="cursor-dot" id="cursorDot"></div><div class="cursor-ring" id="cursorRing"></div>
+<div id="intro"><div class="intro-inner"><div class="logo-mark">AK</div><h1 class="intro-name">Achyuth Kumar <span>Bellamkonda</span></h1><p class="intro-role">Senior Research Analyst · Company &amp; Industry Research · Talent Sourcing Support</p><button class="enter-btn" id="enterBtn"><i class="fa-solid fa-arrow-right"></i> Explore Portfolio</button><p class="enter-hint">Click to open the portfolio</p></div></div>
+<header><div class="nav"><a class="brand" href="#home"><span class="brand-badge">AK</span><span>Achyuth Kumar</span></a><nav class="nav-links"><a href="#about">About</a><a href="#skills">Skills</a><a href="#work">Work</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#portfolio">Portfolio</a><a class="icon-link mail" href="mailto:achyuthbellamkonda19@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a><a class="icon-link phone" href="tel:+91817961****" aria-label="Phone"><i class="fa-solid fa-mobile-screen"></i></a><a class="icon-link linkedin" href="https://www.linkedin.com/in/nova-hayes-95225825a/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></nav></div></header>
 <main id="home">
-  <section class="hero reveal">
-    <span class="eyebrow">Senior Research Analyst</span>
-    <h1>Turning research into qualified talent pipelines and business opportunities.</h1>
-    <p class="sub">I support Talent Origins with company and industry research, job-opening identification, hiring decision-maker mapping, prospect list building, recruitment research, and professional business outreach.</p>
-    <div class="cta">
-      <a class="btn btn-primary" href="#work">View Sample Work</a>
-      <a class="btn btn-outline" href="#contact">Contact Me</a>
-    </div>
-  </section>
-
-  <section id="about" class="reveal">
-    <span class="eyebrow">About</span>
-    <h2>Research that supports better decisions</h2>
-    <p class="sub">I convert public company, industry, and hiring information into structured insights for recruitment and business-development teams.</p>
-    <div class="grid">
-      <div class="card"><i class="fa-solid fa-building"></i><h3>Company Research</h3><p>Research organizations, locations, growth signals, hiring activity, and relevant stakeholders.</p></div>
-      <div class="card"><i class="fa-solid fa-magnifying-glass-chart"></i><h3>Industry Research</h3><p>Identify industry trends, target segments, and recruitment opportunities.</p></div>
-      <div class="card"><i class="fa-solid fa-users"></i><h3>Decision-Maker Mapping</h3><p>Identify hiring managers, talent-acquisition leaders, founders, and relevant contacts.</p></div>
-    </div>
-  </section>
-
-  <section id="skills" class="reveal">
-    <span class="eyebrow">Skills</span>
-    <h2>Core capabilities</h2>
-    <p class="sub">Capabilities applied across research, recruitment support, and business-development workflows.</p>
-    <div class="skills">
-      <span class="skill">Company Research</span>
-      <span class="skill">Industry Research</span>
-      <span class="skill">Market Mapping</span>
-      <span class="skill">Job-Opening Identification</span>
-      <span class="skill">Hiring Decision-Maker Research</span>
-      <span class="skill">Prospect List Building</span>
-      <span class="skill">Recruitment Research</span>
-      <span class="skill">Talent Sourcing Support</span>
-      <span class="skill">Business Proposals</span>
-      <span class="skill">Email Outreach</span>
-      <span class="skill">Lead Qualification</span>
-      <span class="skill">CRM &amp; Spreadsheet Data Management</span>
-    </div>
-  </section>
-
-  <section id="work" class="reveal">
-    <span class="eyebrow">Sample Work</span>
-    <h2>Anonymized research examples</h2>
-    <p class="sub">Client names, candidate information, and confidential business data are omitted.</p>
-
-    <div class="case">
-      <div>
-        <h3>Company &amp; Industry Research</h3>
-        <p>Researched target organizations to assess business focus, locations, hiring activity, and relevant decision-makers.</p>
-        <ul>
-          <li>Compiled structured company profiles.</li>
-          <li>Identified likely hiring needs and stakeholder functions.</li>
-          <li>Prepared research summaries for internal use.</li>
-        </ul>
-      </div>
-      <div><div class="metric">Research</div><div class="metric-label">Company profile template</div></div>
-    </div>
-
-    <div class="case">
-      <div>
-        <h3>Job Openings &amp; Decision-Maker Mapping</h3>
-        <p>Identified active or recent openings and mapped likely hiring stakeholders at target companies.</p>
-        <ul>
-          <li>Tracked roles, departments, locations, and seniority.</li>
-          <li>Identified relevant hiring contacts from public sources.</li>
-          <li>Flagged priority accounts for outreach.</li>
-        </ul>
-      </div>
-      <div><div class="metric">Mapping</div><div class="metric-label">Target-account tracker</div></div>
-    </div>
-
-    <div class="case">
-      <div>
-        <h3>Prospect List Building</h3>
-        <p>Built prospect lists for recruitment and business-development campaigns using defined target criteria.</p>
-        <ul>
-          <li>Segmented prospects by industry, geography, and company size.</li>
-          <li>Compiled publicly available business-contact information.</li>
-          <li>Standardized records for CRM or spreadsheet handoff.</li>
-        </ul>
-      </div>
-      <div><div class="metric">Pipeline</div><div class="metric-label">Prospect database structure</div></div>
-    </div>
-
-    <div class="case">
-      <div>
-        <h3>Business Proposals &amp; Outreach</h3>
-        <p>Prepared proposals and personalized outreach emails focused on client needs, service fit, and next steps.</p>
-        <ul>
-          <li>Created clear proposal outlines.</li>
-          <li>Drafted concise professional outreach emails.</li>
-          <li>Maintained outreach and follow-up records.</li>
-        </ul>
-      </div>
-      <div><div class="metric">Outreach</div><div class="metric-label">Email &amp; proposal templates</div></div>
-    </div>
-  </section>
-
-  <section id="experience" class="reveal">
-    <span class="eyebrow">Experience</span>
-    <h2>Professional experience</h2>
-    <div class="timeline">
-      <div class="role">
-        <h3>Senior Research Analyst</h3>
-        <div class="meta">Talent Origins · [July] – Present · [Hyderabad / Onsite]</div>
-        <ul>
-          <li>Conducted company and industry research to identify recruitment and business-development opportunities.</li>
-          <li>Identified job openings and researched hiring decision-makers.</li>
-          <li>Built and maintained prospect lists for outreach campaigns.</li>
-          <li>Supported recruiters with company, role, and talent-market research.</li>
-          <li>Prepared business proposals and professional email outreach.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section id="education" class="reveal">
-    <span class="eyebrow">Education</span>
-    <h2>Academic background</h2>
-    <p class="sub">Educational foundation supporting research, data analysis, and business-development work.</p>
-
-    <div class="timeline">
-      <div class="role">
-        <h3>B.Sc. in Data Science</h3>
-        <div class="meta">Government Degree College, Khairatabad (GDCK) · <a href="https://www.osmania.ac.in/" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none;">Osmania University</a> · 2022–2025</div>
-        <ul>
-          <li>Specialization: Data Science.</li>
-          <li>Passed with 80%.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="contact reveal">
-    <span class="eyebrow">Contact</span>
-    <h2>Let’s connect</h2>
-    <p class="sub">Available for research, recruitment-research support, and business-development research opportunities.</p>
-
-    <div class="contact-grid">
-      <div class="contact-card">
-        <div class="contact-icon ci-name"><i class="fa-solid fa-user"></i></div>
-        <div><span>Name</span><strong>B. Achyuth Kumar</strong></div>
-      </div>
-
-      <a class="contact-card" href="mailto:achyuthbellamkonda19@gmail.com">
-        <div class="contact-icon ci-mail"><i class="fa-solid fa-envelope"></i></div>
-        <div><span>Gmail</span><strong>Click to email me</strong></div>
-      </a>
-
-      <a class="contact-card" href="tel:+918179619825">
-        <div class="contact-icon ci-phone"><i class="fa-solid fa-mobile-screen"></i></div>
-        <div><span>Mobile</span><strong>Click to call</strong></div>
-      </a>
-
-      <a class="contact-card" href="https://www.linkedin.com/in/nova-hayes-95225825a/" target="_blank" rel="noopener">
-        <div class="contact-icon ci-linkedin"><i class="fa-brands fa-linkedin-in"></i></div>
-        <div><span>LinkedIn</span><strong>View professional profile</strong></div>
-      </a>
-
-      <a class="contact-card" href="https://www.google.com/maps/search/Hyderabad,+India" target="_blank" rel="noopener">
-        <div class="contact-icon ci-location"><i class="fa-solid fa-location-dot"></i></div>
-        <div><span>Location</span><strong>Hyderabad, India</strong></div>
-      </a>
-
-      <div class="contact-card">
-        <div class="contact-icon ci-available"><i class="fa-solid fa-circle-check"></i></div>
-        <div><span>Availability</span><strong>Full-time</strong></div>
-      </div>
-    </div>
-  </section>
+<section class="hero reveal"><span class="eyebrow">Senior Research Analyst</span><h1>Turning research into qualified talent pipelines and business opportunities.</h1><p class="sub">I support Talent Origins with company and industry research, job-opening identification, hiring decision-maker mapping, prospect list building, recruitment research, and professional business outreach.</p><div class="cta"><a class="btn btn-primary" href="#work">View Sample Work</a><a class="btn btn-outline" href="#contact">Contact Me</a></div></section>
+<section id="about" class="reveal"><span class="eyebrow">About</span><h2>Research that supports better decisions</h2><p class="sub">I convert public company, industry, and hiring information into structured insights for recruitment and business-development teams.</p><div class="grid"><div class="card"><i class="fa-solid fa-building"></i><h3>Company Research</h3><p>Research organizations, locations, growth signals, hiring activity, and relevant stakeholders.</p></div><div class="card"><i class="fa-solid fa-magnifying-glass-chart"></i><h3>Industry Research</h3><p>Identify industry trends, target segments, and recruitment opportunities.</p></div><div class="card"><i class="fa-solid fa-users"></i><h3>Decision-Maker Mapping</h3><p>Identify hiring managers, talent-acquisition leaders, founders, and relevant contacts.</p></div></div></section>
+<section id="skills" class="reveal"><span class="eyebrow">Skills</span><h2>Core capabilities</h2><p class="sub">Capabilities applied across research, recruitment support, and business-development workflows.</p><div class="skills"><span class="skill">Company Research</span><span class="skill">Industry Research</span><span class="skill">Market Mapping</span><span class="skill">Job-Opening Identification</span><span class="skill">Hiring Decision-Maker Research</span><span class="skill">Prospect List Building</span><span class="skill">Recruitment Research</span><span class="skill">Talent Sourcing Support</span><span class="skill">Business Proposals</span><span class="skill">Email Outreach</span><span class="skill">Lead Qualification</span><span class="skill">CRM &amp; Spreadsheet Data Management</span></div></section>
+<section id="work" class="reveal"><span class="eyebrow">Sample Work</span><h2>Anonymized research examples</h2><p class="sub">Client names, candidate information, and confidential business data are omitted.</p><div class="case"><div><h3>Company &amp; Industry Research</h3><p>Researched target organizations to assess business focus, locations, hiring activity, and relevant decision-makers.</p><ul><li>Compiled structured company profiles.</li><li>Identified likely hiring needs and stakeholder functions.</li><li>Prepared research summaries for internal use.</li></ul></div><div><div class="metric">Research</div><div class="metric-label">Company profile template</div></div></div><div class="case"><div><h3>Job Openings &amp; Decision-Maker Mapping</h3><p>Identified active or recent openings and mapped likely hiring stakeholders at target companies.</p><ul><li>Tracked roles, departments, locations, and seniority.</li><li>Identified relevant hiring contacts from public sources.</li><li>Flagged priority accounts for outreach.</li></ul></div><div><div class="metric">Mapping</div><div class="metric-label">Target-account tracker</div></div></div><div class="case"><div><h3>Prospect List Building</h3><p>Built prospect lists for recruitment and business-development campaigns using defined target criteria.</p><ul><li>Segmented prospects by industry, geography, and company size.</li><li>Compiled publicly available business-contact information.</li><li>Standardized records for CRM or spreadsheet handoff.</li></ul></div><div><div class="metric">Pipeline</div><div class="metric-label">Prospect database structure</div></div></div><div class="case"><div><h3>Business Proposals &amp; Outreach</h3><p>Prepared proposals and personalized outreach emails focused on client needs, service fit, and next steps.</p><ul><li>Created clear proposal outlines.</li><li>Drafted concise professional outreach emails.</li><li>Maintained outreach and follow-up records.</li></ul></div><div><div class="metric">Outreach</div><div class="metric-label">Email &amp; proposal templates</div></div></div></section>
+<section id="experience" class="reveal"><span class="eyebrow">Experience</span><h2>Professional experience</h2><div class="timeline">
+<div class="role"><h3>Senior Research Analyst</h3><div class="meta">Talent Origins · July 2026 – Present · Hyderabad, India</div><ul><li>Conduct company and industry research to identify recruitment and business-development opportunities.</li><li>Identify job openings and research hiring decision-makers.</li><li>Build and maintain prospect lists for outreach campaigns.</li><li>Support recruiters with company, role, and talent-market research.</li><li>Prepare business proposals and professional email outreach.</li></ul></div>
+<div class="role"><div class="experience-heading"><a class="company-logo-link" href="https://trivenniyukti.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Tri Ven Niyukti Global website"><img class="company-logo" src="https://logo.clearbit.com/trivenniyukti.com" alt="Tri Ven Niyukti Global logo" loading="lazy" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=trivenniyukti.com&sz=256';this.classList.add('favicon-logo');"><span class="logo-fallback" aria-hidden="true">TVN</span></a><div><h3><a class="company-name" href="https://trivenniyukti.com/" target="_blank" rel="noopener noreferrer">Tri Ven Niyukti Global</a></h3><div class="meta">Research Analyst · August 2025 – July 2026</div><a class="company-website" href="https://trivenniyukti.com/" target="_blank" rel="noopener noreferrer">Visit company website <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div></div><ul><li>Conducted company and industry research to identify recruitment and business-development opportunities.</li><li>Identified job openings and researched hiring decision-makers.</li><li>Built and maintained prospect lists for outreach campaigns.</li><li>Supported recruiters with company, role, and talent-market research.</li><li>Prepared business proposals and professional email outreach.</li></ul></div>
+<div class="role"><div class="experience-heading"><a class="company-logo-link" href="https://recruitpodglobal.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit RecruitPod Global website"><img class="company-logo" src="https://logo.clearbit.com/recruitpodglobal.com" alt="RecruitPod Global logo" loading="lazy" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=recruitpodglobal.com&sz=256';this.classList.add('favicon-logo');"><span class="logo-fallback" aria-hidden="true">RPG</span></a><div><h3><a class="company-name" href="https://recruitpodglobal.com/" target="_blank" rel="noopener noreferrer">RecruitPod Global</a></h3><div class="meta">Research Analyst · August 2025 – July 2026</div><a class="company-website" href="https://recruitpodglobal.com/" target="_blank" rel="noopener noreferrer">Visit company website <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div></div><ul><li>Researched target companies, industries, and job openings to support recruitment activities.</li><li>Identified hiring contacts and decision-makers using publicly available sources.</li><li>Compiled and organized prospect information for business outreach.</li><li>Supported recruitment research, business proposals, and professional email outreach.</li></ul></div>
+<div class="role"><div class="experience-heading"><a class="company-logo-link" href="https://www.wallglazing.in/" target="_blank" rel="noopener noreferrer" aria-label="Visit Wall Glazing website"><img class="company-logo" src="https://logo.clearbit.com/wallglazing.in" alt="Wall Glazing logo" loading="lazy" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=wallglazing.in&sz=256';this.classList.add('favicon-logo');"><span class="logo-fallback" aria-hidden="true">WG</span></a><div><h3><a class="company-name" href="https://www.wallglazing.in/" target="_blank" rel="noopener noreferrer">Wall Glazing</a></h3><div class="meta">Field Supervisor &amp; Construction Supervisor – Marketing · During B.Sc. at Osmania University</div><a class="company-website" href="https://www.wallglazing.in/" target="_blank" rel="noopener noreferrer">Visit company website <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div></div><ul><li>Worked as a Field Supervisor and Construction Supervisor while pursuing my B.Sc. in Data Science at Osmania University.</li><li>Supported on-site coordination, construction supervision, and field-level execution activities.</li><li>Handled marketing and client-facing responsibilities for Wall Glazing projects.</li><li>Worked on the Trendset Jaybheri LLP project as my first site assignment.</li></ul></div>
+<div class="role"><div class="experience-heading"><a class="company-logo-link" href="https://www.siddivinayakabajaj.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Siddhi Vinayak Bajaj website"><img class="company-logo" src="https://logo.clearbit.com/siddivinayakabajaj.com" alt="Siddhi Vinayak Bajaj logo" loading="lazy" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=siddivinayakabajaj.com&sz=256';this.classList.add('favicon-logo');"><span class="logo-fallback" aria-hidden="true">Bajaj</span></a><div><h3><a class="company-name" href="https://www.siddivinayakabajaj.com/" target="_blank" rel="noopener noreferrer">Bajaj Automobiles – Siddhi Vinayak Bajaj</a></h3><div class="meta">Service Supervisor · Kachiguda, Hyderabad · 1 Year</div><a class="company-website" href="https://www.siddivinayakabajaj.com/" target="_blank" rel="noopener noreferrer">Visit company website <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div></div><ul><li>Worked as my first job as a Service Supervisor at Bajaj Automobiles, Kachiguda.</li><li>Supervised daily service operations and coordinated workflow between customers, service advisors, technicians, and support staff.</li><li>Monitored vehicle service progress, ensured timely completion of scheduled maintenance and repair activities, and supported quality checks.</li><li>Handled customer queries, service updates, escalation support, and follow-up communication.</li><li>Coordinated spare-parts requirements, job-card documentation, service records, and workshop productivity activities.</li><li>Supported team supervision, task allocation, and adherence to service standards and safety practices.</li></ul></div>
+</div></section>
+<section id="education" class="reveal"><span class="eyebrow">Education</span><h2>Educational background</h2><p class="sub">Academic foundation in data science, combined with practical site-supervision and marketing experience.</p><div class="timeline"><div class="role"><h3>B.Sc. in Data Science</h3><div class="meta">Government Degree College, Khairatabad (GDCK) · <a href="https://www.osmania.ac.in/" target="_blank" rel="noopener noreferrer" style="color:var(--accent);text-decoration:none;">Osmania University</a> · 2022–2025</div><ul><li>Specialization: Data Science.</li><li>Passed with 80%.</li><li>During my studies, worked as a Field Supervisor and Construction Supervisor – Marketing at Wall Glazing.</li></ul></div></div></section>
+<section id="portfolio" class="reveal"><span class="eyebrow">Portfolio</span><h2>Company &amp; project portfolio</h2><p class="sub">Selected companies, projects, and professional work associated with my experience.</p>
+<div class="case"><div><h3>Bajaj Automobiles – Service Operations</h3><p>First professional role as a Service Supervisor at Siddhi Vinayak Bajaj, Kachiguda, supporting end-to-end vehicle service operations and customer coordination.</p><ul><li>Role: Service Supervisor.</li><li>Company: <a href="https://www.siddivinayakabajaj.com/" target="_blank" rel="noopener noreferrer" style="color:var(--accent);text-decoration:none;">Siddhi Vinayak Bajaj</a>.</li><li>Location: Kachiguda, Hyderabad.</li><li>Duration: 1 year.</li></ul></div><div><div class="metric">First Job</div><div class="metric-label">Service supervision</div></div></div>
+<div class="case"><div><h3>Trendset Jaybheri LLP Project</h3><p>My first site assignment with Wall Glazing, where I supported field supervision, construction coordination, and marketing-related activities.</p><ul><li>Role: Field Supervisor &amp; Construction Supervisor – Marketing.</li><li>Company: <a href="https://www.wallglazing.in/" target="_blank" rel="noopener noreferrer" style="color:var(--accent);text-decoration:none;">Wall Glazing</a>.</li><li>Supported on-site execution and project coordination.</li></ul></div><div><div class="metric">First Site</div><div class="metric-label">Trendset Jaybheri LLP</div></div></div>
+</section>
+<section id="contact" class="contact reveal"><span class="eyebrow">Contact</span><h2>Let’s connect</h2><p class="sub">Available for research, recruitment-research support, and business-development research opportunities.</p><div class="contact-grid"><div class="contact-card"><div class="contact-icon ci-name"><i class="fa-solid fa-user"></i></div><div><span>Name</span><strong>B. Achyuth Kumar</strong></div></div><a class="contact-card" href="mailto:achyuthbellamkonda19@gmail.com"><div class="contact-icon ci-mail"><i class="fa-solid fa-envelope"></i></div><div><span>Gmail</span><strong>Click to email me</strong></div></a><a class="contact-card" href="tel:+918179619825"><div class="contact-icon ci-phone"><i class="fa-solid fa-mobile-screen"></i></div><div><span>Mobile</span><strong>Click to call</strong></div></a><a class="contact-card" href="https://www.linkedin.com/in/nova-hayes-95225825a/" target="_blank" rel="noopener"><div class="contact-icon ci-linkedin"><i class="fa-brands fa-linkedin-in"></i></div><div><span>LinkedIn</span><strong>View professional profile</strong></div></a><a class="contact-card" href="https://www.google.com/maps/search/Hyderabad,+India" target="_blank" rel="noopener"><div class="contact-icon ci-location"><i class="fa-solid fa-location-dot"></i></div><div><span>Location</span><strong>Hyderabad, India</strong></div></a><div class="contact-card"><div class="contact-icon ci-available"><i class="fa-solid fa-circle-check"></i></div><div><span>Availability</span><strong>Full-time</strong></div></div></div></section>
 </main>
-
 <footer>© <span id="year"></span> B. Achyuth Kumar. Sample work is anonymized and contains no confidential client or candidate information.</footer>
-
 <script>
-const intro=document.getElementById('intro');
-const enterBtn=document.getElementById('enterBtn');
-enterBtn.addEventListener('click',()=>{
-  intro.classList.add('hidden');
-  document.body.classList.remove('intro-lock');
-  setTimeout(()=>{intro.style.display='none';},750);
-  document.querySelectorAll('.reveal').forEach((el,i)=>{
-    setTimeout(()=>el.classList.add('visible'),120*i);
-  });
-});
-
-const dot=document.getElementById('cursorDot');
-const ring=document.getElementById('cursorRing');
-let mx=innerWidth/2,my=innerHeight/2,rx=mx,ry=my;
+const intro=document.getElementById('intro');const enterBtn=document.getElementById('enterBtn');
+enterBtn.addEventListener('click',()=>{intro.classList.add('hidden');document.body.classList.remove('intro-lock');setTimeout(()=>{intro.style.display='none';},750);document.querySelectorAll('.reveal').forEach((el,i)=>{setTimeout(()=>el.classList.add('visible'),120*i);});});
+const dot=document.getElementById('cursorDot');const ring=document.getElementById('cursorRing');let mx=innerWidth/2,my=innerHeight/2,rx=mx,ry=my;
 addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;dot.style.left=mx+'px';dot.style.top=my+'px';});
-function animate(){rx+=(mx-rx)*.16;ry+=(my-ry)*.16;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(animate);}
-animate();
-document.querySelectorAll('a,button,.card,.skill,.contact-card').forEach(el=>{
-  el.addEventListener('mouseenter',()=>ring.classList.add('hovering'));
-  el.addEventListener('mouseleave',()=>ring.classList.remove('hovering'));
-});
+function animate(){rx+=(mx-rx)*.16;ry+=(my-ry)*.16;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(animate);}animate();
+document.querySelectorAll('a,button,.card,.skill,.contact-card').forEach(el=>{el.addEventListener('mouseenter',()=>ring.classList.add('hovering'));el.addEventListener('mouseleave',()=>ring.classList.remove('hovering'));});
 document.getElementById('year').textContent=new Date().getFullYear();
+document.querySelectorAll('.company-logo-link').forEach(link=>{const img=link.querySelector('img');const fallback=link.querySelector('.logo-fallback');const showFallback=()=>{img.style.display='none';fallback.style.display='grid';};img.addEventListener('error',showFallback);img.addEventListener('load',()=>{if(img.naturalWidth<2)showFallback();});});
 </script>
-  <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "aa16402d0c0441d3af778e15753c764c"}'></script><!-- End Cloudflare Web Analytics -->
+<!-- Cloudflare Web Analytics --><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"aa16402d0c0441d3af778e15753c764c"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
